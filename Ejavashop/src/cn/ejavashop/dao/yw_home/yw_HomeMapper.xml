@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ejavashop.dao.yw_home.yw_HomeMapper">
+	<!-- PC首页轮播图总数量 -->
+	<select id="getShouyeCount" resultType="int">
+		SELECT COUNT(1) AS COUNT FROM front_page WHERE 1 = 1
+		<if test="title != null and title != ''">
+			AND title LIKE CONCAT('%',#{title},'%')
+		</if>
+		<if test="status != 0 and status != ''">
+			AND status = #{status}
+		</if>
+		<if test="beginTime != null and beginTime != ''">
+			AND beginTime = #{beginTime}
+		</if>
+	</select>
+	
+	<!-- 查询PC首页轮播图的信息 -->
+	<select id="getShouyeList" resultType="Front_Page">
+		SELECT * FROM front_page WHERE 1 = 1
+		<if test="title != null and title != ''">
+			AND title LIKE CONCAT('%',#{title},'%')
+		</if>
+		<if test="status != 0 and status != ''">
+			AND status = #{status}
+		</if>
+		<if test="beginTime != null and beginTime != ''">
+			AND beginTime = #{beginTime}
+		</if>
+		ORDER BY LastModificationTime DESC
+	</select>
+	
+	
+	
+</mapper>

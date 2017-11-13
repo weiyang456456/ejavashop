@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ejavashop.dao.login.StuMapper">
+	<!-- 总数量 -->
+	<select id="getStuCount" resultType="int">
+		SELECT count(1) as count 
+		FROM standard 
+		WHERE 1 = 1
+		
+	</select>
+	
+	<!-- 查询信息 -->
+	<select id="getStanList" resultType="Standard">
+		SELECT * FROM standard WHERE 1 = 1
+		<if test="zhname != null and zhname != ''">
+			AND zhname LIKE CONCAT('%',#{zhname},'%')
+		</if>
+		order by release_date DESC limit #{currentPageNo},#{pageSize}
+	</select>
+	
+	<!-- 删除信息 -->
+	<delete id="deleteStu">
+		DELETE FROM standard WHERE id=#{id}
+	</delete>
+	
+	<!-- 添加 -->
+	<insert id="add" parameterType="Standard">
+		INSERT INTO standard(std_num,zhname,`version`,`keys`,release_date,impl_date,
+			package_path,pathName) VALUES(#{std_num},#{zhname},#{version},#{keys},#{release_date},
+			#{impl_date},#{package_path},#{pathName})
+	</insert>
+	
+	<!-- 按照id查询信息 -->
+	<select id="getStandardId" resultType="Standard">
+		SELECT * FROM standard WHERE id = #{id}
+	</select>
+	
+	<!-- 修改 -->
+	<update id="getStandardxiu" parameterType="Standard">
+		UPDATE standard SET std_num=#{std_num},zhname=#{zhname},`version`=#{version},
+			`keys`=#{keys},release_date=#{release_date},impl_date=#{impl_date},
+			package_path=#{package_path},pathName=#{pathName}
+		WHERE id=#{id}
+	</update>
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

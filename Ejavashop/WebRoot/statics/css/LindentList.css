@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+.first{
+	display:flex;
+	flex-direction:column;
+	font-size:12px;
+	width:100%;
+	height:100%;
+	}
+.title{
+	background-color:#4D5058;
+	padding:5px;
+	color:#fff;
+	border:1px solid #4D5058;
+	font-weight:bold;}
+.put{
+	float:right;}
+.one{
+	padding:15px 10px;
+	border:1px solid #9F9F9F;
+	display:flex;}
+.two{
+	padding:6px 10px;
+	border:1px solid #9F9F9F
+	}
+.three{
+	height:360px;
+	border:1px solid #9F9F9F;
+	overflow:auto;}
+.img{
+	vertical-align:middle;}
+img{
+	vertical-align:middle;
+	padding:0px 5px;
+	}
+td{
+	padding:5px 15px;
+	overflow:hidden;
+	word-break:keep-all;
+	text-overflow:ellipsis;
+	border:1px #9F9F9F solid;
+	width:15%;
+	text-align:center;}
+.serial{
+	width:10px;}
+td table{
+	width:100%;}
+td td{
+	width:35%;}
+

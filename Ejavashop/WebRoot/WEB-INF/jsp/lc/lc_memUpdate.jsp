@@ -1,0 +1,130 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'lc_memUpdate.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+
+   <link rel="stylesheet" href="${pageContext.request.contextPath }/statics/layui/css/layui.css">
+   
+  </head>
+  	<style type="text/css">
+	 table { border-collapse: separate; border-spacing: 20px; }
+	 #div1{
+	 	padding-left: 50px;
+	 	padding-top: 30px;
+	 	width: 900px;
+	 	height: 300px;
+	 	margin-left:25px;
+	 }
+	 #head1{
+	 	padding-left: 5px;
+	 	padding-top: 10px;
+	 	height: 35px;
+	 	background-color: #89909D;
+	 	font-weight:bold;
+	 	margin-bottom:20px;
+	 	color:#E0E0E0;
+	 }
+         #divs{
+         	margin-left:10px;
+         	width: 1115px;
+         	height: 500px;;
+         	border:2px #89909D solid;
+         	margin-top:5px;
+         }
+         #div3{
+         	padding-left:430px;
+         	padding-top: 15px;
+         }
+         .fieldset{
+         	margin-left:25px;
+         	width: 300px;
+         }
+        #h1{
+        	position: absolute;
+        	left: 1000px;
+        	top:3px;
+        }
+        #bu{
+          background-color: #869BBC;
+        }
+        body{
+        }
+	 </style>
+  <body>
+		<script src="${pageContext.request.contextPath }/statics/layui/layui.js"></script>
+		  <script>
+			layui.use('laydate', function(){
+  var laydate = layui.laydate;
+
+  //日期
+  laydate.render({
+    elem: '#datet'
+  });
+  laydate.render({
+    elem: '#datew'
+  });
+  
+});
+</script>
+<div id="divs">
+<div id="head1">
+	<div>添加轮播图</div> 
+</div>
+ <form action="" method="post" enctype="multipart/form-data">
+ 	<fieldset class="fieldset" style="width: 999px;">
+ 		 <legend><img src="${pageContext.request.contextPath }/statics/images/lx.png" id="img"/>基本信息</legend>
+<div id="div1" class="layui-side-scroll">
+ 
+      <table align="left" class="table1">
+           <tr>
+           <td align="right"><span calss="fa fa-asterisk"></span>用户名称:</td>
+           <td>11111</td>
+           </tr>
+            <tr>
+           <td align="right">商家名称:</td>
+           <td>011</td>
+           </tr>
+            <tr>
+           <td align="right">商家名称:</td>
+           <td>00111</td>
+           </tr>
+            <tr>
+           <td align="right">商家回复:<br><br><br><br><br></td></td>
+           <td><textarea placeholder="请输入内容" class="layui-textarea" style="width: 450px"></textarea></td>
+           </tr>
+             </table>
+         </div>
+         </fieldset>
+         <div id="div3">
+         	   <button class="layui-btn layui-btn-radius" id="bu">新    增</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="bu" class="layui-btn layui-btn-normal layui-btn-radius" style="width: 70px;">返   回</button>
+         </div>
+          </form>
+       </div>
+	</body>
+	<script src="${pageContext.request.contextPath }/statics/jquery-1.8.3.js"></script>
+       <script type="text/javascript">
+             $(function(){
+                 $("#img").click(function(){
+                      $("#div1").fadeToggle("3000");
+                      $("button").fadeToggle("3000");
+                    });
+             });
+       </script>
+</html>

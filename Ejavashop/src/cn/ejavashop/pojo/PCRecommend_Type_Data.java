@@ -1,0 +1,88 @@
+package cn.ejavashop.pojo;
+
+import java.util.Date;
+
+/*
+ *PC推荐类型数据
+ */
+public class PCRecommend_Type_Data {
+        private int id;              //id
+        private int typeId;          //类型id
+        private int dataType;        //数据类型
+        private int goodsId;         //商品id
+        private String pictureTitle; //图片标题
+        private String linkPath;     //链接地址
+        private String picturePath;  //图片地址
+        private int sortNumber;      //排序号
+        private String remark;       //备注
+        private int modificationMan; //修改人
+        private Date modificationTime;//修改时间
+        
+		public int getId() {
+			return id;
+		}
+		public void setId(int id) {
+			this.id = id;
+		}
+		public int getTypeId() {
+			return typeId;
+		}
+		public void setTypeId(int typeId) {
+			this.typeId = typeId;
+		}
+		public int getDataType() {
+			return dataType;
+		}
+		public void setDataType(int dataType) {
+			this.dataType = dataType;
+		}
+		public int getGoodsId() {
+			return goodsId;
+		}
+		public void setGoodsId(int goodsId) {
+			this.goodsId = goodsId;
+		}
+		public String getPictureTitle() {
+			return pictureTitle;
+		}
+		public void setPictureTitle(String pictureTitle) {
+			this.pictureTitle = pictureTitle;
+		}
+		public String getLinkPath() {
+			return linkPath;
+		}
+		public void setLinkPath(String linkPath) {
+			this.linkPath = linkPath;
+		}
+		public String getPicturePath() {
+			return picturePath;
+		}
+		public void setPicturePath(String picturePath) {
+			this.picturePath = picturePath;
+		}
+		public int getSortNumber() {
+			return sortNumber;
+		}
+		public void setSortNumber(int sortNumber) {
+			this.sortNumber = sortNumber;
+		}
+		public String getRemark() {
+			return remark;
+		}
+		public void setRemark(String remark) {
+			this.remark = remark;
+		}
+		public int getModificationMan() {
+			return modificationMan;
+		}
+		public void setModificationMan(int modificationMan) {
+			this.modificationMan = modificationMan;
+		}
+		public Date getModificationTime() {
+			return modificationTime;
+		}
+		public void setModificationTime(Date modificationTime) {
+			this.modificationTime = modificationTime;
+		}
+        
+}
